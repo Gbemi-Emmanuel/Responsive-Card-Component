@@ -1,0 +1,222 @@
+
+
+:root {
+    ---primary-color: #3D8168;
+    ---primary-color-active: #1A4031;
+    ---white: #FFF;
+    ---black: #000;
+    ---grey: #ACACB4;
+    ---cream: #F3EAE3;
+}
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(---cream);
+}
+
+p, h2 {
+    font-family: Montserrat;
+}
+
+h1 {
+    font-family: Fraunces;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container .box {
+    display: flex;
+    width: 40%;
+    height: auto;
+    border-radius: 16px;
+    background-color: var(---white);
+}
+
+.container .box .leftSide, .rightSide {
+    flex-wrap: wrap;
+    flex-basis: 50%;
+}
+
+.container .box .leftSide {
+    width: 100%;
+    height: auto;
+    background-image: url('./images/image-product-desktop.jpg');
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+.container .box .leftSide img{
+    display: none;
+}
+
+.container .box .rightSide{
+    padding: 34px;
+}
+
+.container .box .rightSide h2{
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 5px;
+}
+
+.container .box .rightSide h1{
+    font-size: 38px;
+    line-height: 0.9;
+    padding: 16px 0px;
+}
+
+.container .box .rightSide .content{
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 16px;
+}
+
+.container .box .rightSide .price{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    font-family: Fraunces;
+    font-weight: 600;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 16px;
+    color: var(---primary-color);
+
+}
+
+.container .box .rightSide .price .old{
+    font-weight: 400;
+    font-size: 18px;
+    padding-left: 16px;
+    text-decoration: line-through;
+}
+
+.container .box .rightSide button img{
+    padding-right: 8px;
+}
+
+.container .box .rightSide button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+    padding: 16px;
+    border-radius: 10px;
+    background-color: var(---primary-color);
+    color: var(---white);
+    outline: none;
+    border: none;
+}
+
+.container .box .rightSide button:hover{
+    background-color: var(---primary-color-active);
+}
+
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+
+@media screen and (max-width: 770px) { 
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+
+    }
+
+    .container .box {
+        width: 80%;
+        height: auto;
+        flex-direction: column;
+        margin: 8% auto;
+    }
+
+    .container .box .leftSide, .rightSide {
+
+        flex-basis: 100%;
+    }
+    .container .box .leftSide {
+        width: 100%;
+        background-image: url('./images/image-product-mobile.jpg');
+        background-image: none;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .container .box .leftSide img{
+        display: block;
+        width: 100%;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+    }
+
+    .container .box .rightSide h2{
+        font-size: 20px;
+        font-weight: 200;
+        letter-spacing: 5px;
+    }
+    
+    .container .box .rightSide h1{
+        font-size: 40px;
+        line-height: 0.9;
+        padding: 16px 0px;
+    }
+
+}
+
+@media screen and (max-width: 470px) { 
+
+    .container .box {
+        width: 90%;
+    }
+    
+
+    .container .box .leftSide img{
+        display: block;
+        width: 100%;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+    }
+
+    .container .box .rightSide h2{
+        font-size: 20px;
+        font-weight: 200;
+        letter-spacing: 5px;
+    }
+    
+    .container .box .rightSide h1{
+        font-size: 32px;
+    }
+    
+    .container .box .rightSide .content{
+        font-size: 14px;
+        padding: 16px 0px;
+    }
+
+}
